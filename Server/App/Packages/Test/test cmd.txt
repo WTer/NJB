@@ -1,0 +1,93 @@
+ SELECT a.id FROM `orders` a Join `product` as b ON a.ProductId = b.id WHERE b.ProducerId = 1;
+
+
+curl -v -X POST http://localhost:8080/Producer/BasicInfo/ -d '{"Count": 2, "List":[{"CertificateId":"5", "CertficateTime": "2016-09-01", "BigPicture": "5555555555555555", "SmallPicture": "555555555555555555"},{"CertificateId":"6", "CertficateTime":"2016-09-02", "BigPicture": "6666666666666666", "SmallPicture":"66666666666666666"}]}'
+
+
+curl -v -X POST http://localhost:8080/Producer/BasicInfo/ -d {\"LoginName\":\"wensiliu\",\"Password\":\"123456\",\"DisplayName\":\"LiuWensi\",\"Province\":\"Hunan\",\"City\":\"Hengyang\",\"Address\":\"Road5\",\"Telephone\":\"13522878398\",\"Website\":\"www.baidu.com\"}
+
+C:\Users\wensiliu\Downloads\curl_744_0_ssl>curl -v -X PUT http://localhost:8080/Producer/BasicInfo/21 -d {\"LoginName\":\"wensiliu007\",\"Password\":\"123456\",\"DisplayName\":\"LiuWensi1\",\"Province\":\"Hunan\",\"City\":\"Hengyang\",\"Address\":\"Road%205\",\"Telephone\":\"13522878398\",\"Website\":\"www.007.com\n\"}
+
+"LoginName":"登录名，支持手机和邮件",
+	#  "Password":"登录密码，首先用DES256加密，然后进行BASE64编码",
+	#  "DisplayName":"显示名称",
+	#  "Province":"省份名称",
+	#  "City":"城市名称",
+	#  "Address":"地址",
+	#  "Telephone":"电话",
+	#  "Website":"网站"
+
+
+curl -v -X PUT http://localhost:8080/Producer/Certificate/21 -d {\"Count\":\"2\",\"List\":[{\"CertificateId\":\"1\",\"CertficateTime\":\"2015-09-01\",\"BigPicture\":\"5555555555555555\",\"SmallPicture\":\"555555555555555555\"},{\"CertificateId\":\"2\",\"CertficateTime\":\"2015-09-02\",\"BigPicture\":\"6666666666666666\",\"SmallPicture\":\"66666666666666666\"}]}
+C:\Users\wensiliu\Downloads\curl_744_0_ssl>curl -v -X GET http://localhost:8080/Producer/Certificate/20 
+C:\Users\wensiliu\Downloads\curl_744_0_ssl>curl -v -X GET http://localhost:8080/Producer/LoginName/wensiliu007/SessionKey/123456
+
+curl -v -X POST http://localhost:8080/Consumer/BasicInfo/ -d {\"LoginName\":\"consumer1\",\"Password\":\"123456\",\"DisplayName\":\"Consumer1\"}
+
+curl -v -X PUT http://localhost:8080/Consumer/BasicInfo/ -d {\"OldPassword\":\"123456\",\"NewPassword\":\"1234567\",\"DisplayName\":\"Consumer1\"}
+
+curl -v -X PUT http://localhost:8080/Consumer/Portrait/5 -d {\"BigPortrait\":\"123456\",\"SmallPortrait\":\"1234567\"}
+
+curl -v -X PUT http://localhost:8080/Consumer/RichInfo/5 -d {\"Province\":\"Province1\",\"City\":\"City2\",\"Address\":\"Address1\",\"Telephone\":\"Telephone1\"}
+
+curl -v -X PUT http://localhost:8080/Consumer/LoginName/consumer1/SessionKey/1234567
+
+
+curl -v -X POST http://localhost:8080//Product/BasicInfo/ -d {\"Name\":\"Name1\",\"Description\":\"Description2\",\"Type\":\"Type1\",\"ProducerId\":\"21\"}
+curl -v -X PUT http://localhost:8080//Product/BasicInfo/1 -d {\"Name\":\"Name2\",\"Description\":\"Description\",\"Type\":\"Type2\"}
+curl -v -X GET http://localhost:8080/Product/BasicInfo/1
+
+curl -v -X GET http://localhost:8080/Product/BasicInfo/List/?Province=""&City=""&Address=""&ProductType=""&ProductName=""&ProductDesc=""&offset="0"&limit=15&desc=true
+
+http://localhost:8080/Product/BasicInfo/List/?Province=&City=he&Address=road&ProductType=type2&ProductName=Name&ProductDesc=Des&offset=1&limit=15&desc=true
+
+SELECT a.id FROM `product` a JOIN `producer` AS b ON a.producerid = b.id WHERE a.name LIKE %Name% AND a.description LIKE %Des%
+
+curl -v -X PUT http://localhost:8080/Product/Images/1 -d {\"Count\":2,\"List\":[{\"ImageId\":\"10\",\"Description\":\"Description1\",\"BigPicture\":\"5555555555555555\",\"SmallPicture\":\"555555555555555555\"},{\"ImageId\":\"11\",\"Description\":\"Description2\",\"BigPicture\":\"6666666666666666\",\"SmallPicture\":\"66666666666666666\"}]}
+
+curl -v -X  GET http://localhost:8080/Product/Image/1
+
+
+curl -v -X POST	 http://localhost:8080/ProductComment/ -d {\"ProductId\":\"1\",\"Comment\":\"Comment1\",\"ConsumerId\":\"1\"}
+
+
+curl -v -X POST http://localhost:8080/Order/ConsumerId/1/ProductId/1 -d {\"Count\":\"1\",\"Unit\":\"KG\",\"Description\":\"Description\"}
+
+curl -v -X PUT http://localhost:8080/Order/1 -d {\"Count\":\"2\",\"Unit\":\"KG\",\"Description\":\"Description1\"}
+
+curl -v -X PUT http://localhost:8080/Order/Status/1 -d {\"OldStatus\":\"2\",\"NewStatus\":\"0\",\"ProducerId\":\"2\",\"ConsumerId\":\"2\"}
+
+
+curl -v -X POST http://localhost:8080/Favorite/Producer/21/Product/1
+curl -v -X POST http://localhost:8080/Favorite/Consumer/1/Product/1
+
+curl -v -X GET http://localhost:8080/Favorite/Producer/21
+curl -v -X GET http://localhost:8080/Favorite/Consumer/1
+
+curl -v -X POST http://localhost:8080/Favorite/Consumer/1/Producer/21
+
+curl -v -X GET http://localhost:8080/Favorite/Consumer/1/Producer/
+
+curl -v -X DELETE http://localhost:8080/Favorite/Producer/Product/2
+
+
+curl -v -X POST http://localhost:8080/Contact/Producer/21/Consumer/1
+
+curl -v -X GET http://localhost:8080/Contact/Producer/21/Consumer
+
+curl -v -X POST http://localhost:8080/Contact/Producer/21/Producer/22
+
+
+curl -v -X GET http://localhost:8080/Contact/Producer/21/Producer
+
+
+curl -v -X POST http://localhost:8080/Contact/Consumer/1/Producer/21
+
+curl -v -X GET http://localhost:8080/Contact/Consumer/1/Producer
+
+curl -v -X DELETE http://localhost:8080/Contact/Producer/Consumer/2
+
+
+curl -v -X DELETE http://localhost:8080/Contact/Producer/Producer/3
+
+curl -v -X DELETE http://localhost:8080/Contact/Consumer/Producer/4

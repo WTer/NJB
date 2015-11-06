@@ -1,5 +1,5 @@
 <?php
-/**
+/***
  * Step 1: Require the Slim Framework
  *
  * If you are not using Composer, you need to require the

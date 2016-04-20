@@ -1,0 +1,54 @@
+//
+//  Header.pch
+//  test
+//
+//  Created by hpz on 15/11/27.
+//  Copyright © 2015年 hpz. All rights reserved.
+//
+
+#ifndef Header_pch
+#define Header_pch
+
+
+
+//720 * 1319图片像素
+#define scaleWidth           [UIScreen mainScreen].bounds.size.width / 720
+#define scaleHeight          [UIScreen mainScreen].bounds.size.height / 1319
+#define scaleHeight2          [UIScreen mainScreen].bounds.size.height / 1280
+
+#define ScaleWidth           [UIScreen mainScreen].bounds.size.width / 320
+#define ScaleHeight          [UIScreen mainScreen].bounds.size.height / 568
+
+#define Screen_Width   [UIScreen mainScreen].bounds.size.width
+#define Screen_Height  [UIScreen mainScreen].bounds.size.height
+#define StatBar_And_NavBar_Height   64
+#define BaseURL        @"http://182.92.224.165"
+#define BaseColor(a,b,c,d) [UIColor colorWithRed:a/255.0 green:b/255.0 blue:c/255.0 alpha:d]
+#define BaseFont(a) [UIFont systemFontOfSize:a * 3 / 4.0]
+
+#define BaseLableSet(lable, b, c,d, ft) lable.textColor = BaseColor(b,c,d,1);\
+                                        lable.font = BaseFont(ft)
+
+#define HuanCunOfAddressBook [NSString stringWithFormat:@"%@/Documents/HuanCunOfAddressBook.plist", NSHomeDirectory()]
+#define HuanCunOfAlsoExpress [NSString stringWithFormat:@"%@/Documents/HuanCunOfAlsoExpress.plist", NSHomeDirectory()]
+
+#define UserCategory  @"用户类型"
+#define UserID @"UserId"
+#define UserMessageLocalAdress [NSString stringWithFormat:@"%@/Documents/gerenInfo.plist", NSHomeDirectory()]
+#define CityList [NSString stringWithFormat:@"%@/Documents/cityList.plist", NSHomeDirectory()]
+#import "JQBaseRequest.h"
+#import "AFNetworking.h"
+#import "ImageTool.h"
+#import "JudgeNetState.h"
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+#import "TimeString.h"
+#import "Masonry.h"
+#import <CoreText/CoreText.h>
+#import "NSString+WPAttributedMarkup.h"
+#import "WPAttributedStyleAction.h"
+#import "WPHotspotLabel.h"
+#import "NSString+Extension.h"
+#import "MJRefresh.h"
+
+#endif /* Header_pch */

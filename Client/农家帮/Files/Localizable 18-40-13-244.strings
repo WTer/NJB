@@ -1,0 +1,116 @@
+/* 
+  Localizable.strings
+  农帮乐
+
+  Created by hpz on 15/11/30.
+  Copyright © 2015年 jingqi. All rights reserved.
+*/
+
+"REGISTER" = "注册";
+"LOGIN" = "登录";
+"FindPassword" = "找回密码";
+"CONSUMER" = "消费者";
+"FARMER" = "农场主";
+"TEL" = "手机";
+"TELPHONE" = "手机号";
+"PASSWORD" = "密码";
+"Verification code" = "验证码";
+"ATTENTION" = "提示";
+"FREEREGISTER" = "免费注册";
+"Input can't be empty" = "输入不能为空";
+"OK" = "确定";
+"CANCLE" = "取消";
+"SEND" = "发送";
+"SENDING" = "正在发送";
+"NEXT" = "下一步";
+"ACCOUNT" = "账号";
+"SETPASSWORD" = "设置密码";
+"Confirm Password" = "确认密码";
+"The phone number you entered is wrong" = "你输入的手机号有误";
+"Click on set up your icon" = "点击设置您的头像";
+"Set up a nickname" = "设置昵称";
+"We attentively from scratch - Account registration" = "我们用心从零开始 － 账号注册";
+"BEIJING" = "北京";
+"ChaoYangQu" = "朝阳区";
+"Detail Address" = "详细地址";
+"Contact phone" = "联系电话";
+"Company Web" = "公司网站";
+"Open green trip" = "开启绿色之旅";
+"SEARCH" = "搜索";
+"Personal center" = "个人中心";
+"SETTING" = "设置";
+"Send Successfully" = "发送成功";
+"Send Failure" = "发送失败";
+"Verification code is wrong" = "验证码有误";
+"The password does not fit" = "密码不符合";
+"The password is not empty" = "密码不能为空";
+"The nickName is not empty" = "昵称不能为空";
+"Please enter the phone number" = "请先输入手机号码";
+"Please select register type" = "请先选择注册类型";
+"Please select login type" = "请选择登录类型";
+"User record does not exist" = "用户记录不存在";
+"User already exists, please login directly" = "用户已经存在，请直接登录";
+"Nickname already exists. Please enter again" = "昵称已经存在，请重新输入";
+"The mobile phone number has been registered, please login directly" = "该手机号已经注册过，请直接登录";
+"Oh you haven't choose！" = "您还没有选择头像哦！";
+"Are using GPRS/3G/2G" = "正在使用GPRS/3G/2G";
+"Are using wifi" = "正在使用wifi";
+"Please connect to the Internet" = "请先连接网络";
+"days ago" = "天前";
+"EDIT" = "编辑";
+"BUY" = "购买";
+"COMMENT" = "评论";
+"NUMBER" = "数量";
+"Release goods" = "发布商品";
+"Upload the product image" = "上传产品图片";
+"Upload eight pictures at most" = "最多上传8张图片";
+"Name of commodity" = " 商品名称";
+"The introduction" = "商品介绍";
+"Commodity prices" = "商品价格";
+"Yuan" = "元";
+"Original price" = "原价";
+"Please select a product unit" = "请选择一个商品的单位";
+"Unit" = "单位";
+"Freight" = "运费";
+"SAVE" = "保存";
+"TYPE" = "类型";
+"Please choose a commodity type" = "请选择一个商品的类型";
+"Tiao" = "条";
+"Box" = "箱";
+"Bottle" = "瓶";
+"Ge" = "个";
+"Fruit" = "水果";
+"FuShi" = "副食";
+"Seafood" = "海产";
+"AlcoholAndTobacco" = "烟酒";
+"Search for goods" = "搜索商品";
+"List of top search" = "热门搜索榜";
+"Sent to the" = "送至";
+"Please select your shipping address" = "请选择您的收货地址";
+"SERVE" = "服务";
+"The goods provided by" = "本商品由";
+"Provide services" = "提供服务";
+"Contact phone number" = "联系电话";
+"Shipping address" = "收货地址";
+"Add the address" = "增加地址";
+"Add a shipping address" = "添加收货地址";
+//商品名称
+"Name of commodity" = "商品名称";
+//收货人
+"The consignee" = "收货人";
+"Provinces" = "省市区";
+"Click on the select location" = "点击选择位置";
+"The street address" = "街道地址";
+"Set to the default address" = "设为默认地址";
+"Selected provinces" = "选择省市区";
+"Province" = "省份";
+"City" = "城市";
+"Area" = "区域";
+"Please Select" = "请选择";
+"Please select provinces" = "请先选择省份";
+"Please select city" = "请先选择城市";
+"The default address" = "默认地址";
+"Please fill in the shipping address" = "请填写收货地址";
+"Only the farmer can release goods" = "只有农场主才可以发布商品";
+"Only consumers can add a shipping address" = "只有消费者才可以添加收货地址";
+"Modify the address" = "修改地址";
